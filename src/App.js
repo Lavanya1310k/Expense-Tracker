@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import HomeComponent from "./components/index";
+import styled from 'styled-components';
 
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+`
+// const Overcontainer=styled.div`
+//     background-image: url(${designerImage});
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     width: '100vw';
+//     height: '500vh';
+
+// `
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Container>Expense Tracker</Container>
+      <HomeComponent />
+
     </div>
   );
 }
